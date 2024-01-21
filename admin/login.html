@@ -5,10 +5,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nguvu | Admin Login</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+
 </head>
 
 <body>
+    <div class="topnav" id="myTopnav">
+        <a href="../index.html" class="active">Home</a>
+        <a href="../assets/404.html">About</a>
+        <a href="login.html">Sign Up</a>
+        <a href="login.html">Login</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Login</button>
+                <button type="button" class="toggle-btn" onclick="register()">Register</button>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank"><img src="../img/fb.png" title="Kelvin Shisanya on Facebook"></a>
+                <a href="https://www.instagram.com/kelvinshisanya" target="_blank"><img src="../img/g.jfif" title="Kelvin Shisanya on IG"></a>
+                <a href="https://www.twitter.com/vox_shecollects" target="_blank"></a><img src="../img/x.jpg" title="Kelvin Shisanya on X formerly Twitter"></a>
 
+            </div>
+            <form id="login" class="input-group">
+                <input type="text" class="input-field" placeholder="Enter Username" required>
+                <input type="password" class="input-field" placeholder="Enter Password" required>
+                <input type="checkbox" class="check-box"><span>Remember Password</span>
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+
+            <form id="register" class="input-group">
+                <input type="text" class="input-field" placeholder="Enter Your Name" required id="name">
+                <input type="email" class="input-field" placeholder="Enter Email address" required id="email">
+                <input type="password" class="input-field" placeholder="Enter Password" required id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+                <input type="password" class="input-field" placeholder="Confirm Password" required id="confirmPassword">
+                <input type="checkbox" class="check-box" required title="please agree to terms and conditions"><span><a href="../assets/t&c.md" target="_blank">Agree T&C</a></span>
+                <button type="submit" class="submit-btn">Register</button>
+            </form>
+        </div>
+
+
+    </div>
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+
+        function register() {
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+
+        function login() {
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0px";
+        }
+    </script>
 </body>
 
 </html>
